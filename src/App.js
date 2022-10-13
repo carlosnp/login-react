@@ -2,7 +2,9 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
+  /** Variable para el correo */
   const [email, setEmail] = useState('');
+  /** Variable para el Contraseña */
   const [pass, setPass] = useState('');
   /**
    * Actualiza la variable del correo
@@ -46,14 +48,14 @@ function App() {
         <label htmlFor="email">
           Correo
           <input type="email" name="Correo" id="email"
-            onChange={handleEmailChange}
-            value={email || ''}
+            value={email || ''} onChange={handleEmailChange}
           />
         </label>
         <label htmlFor="password">
           Contraseña
           <input type="password" name="Contraseña" id="password"
-            onChange={handlePasswordChange}/>
+            value={pass || ''} onChange={handlePasswordChange}
+          />
         </label>
         <button type="submit">Continuar</button>
         <button type="button" onClick={cleanAll}>Limpiar</button>
